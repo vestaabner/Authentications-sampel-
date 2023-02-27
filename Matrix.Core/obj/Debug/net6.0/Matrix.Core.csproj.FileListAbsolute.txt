@@ -1,0 +1,12 @@
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/bin/Debug/net6.0/Matrix.Core.deps.json
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/bin/Debug/net6.0/Matrix.Core.dll
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/bin/Debug/net6.0/Matrix.Core.pdb
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/Matrix.Core.csproj.AssemblyReference.cache
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/Matrix.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/Matrix.Core.AssemblyInfoInputs.cache
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/Matrix.Core.AssemblyInfo.cs
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/Matrix.Core.csproj.CoreCompileInputs.cache
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/Matrix.Core.dll
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/refint/Matrix.Core.dll
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/Matrix.Core.pdb
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Core/obj/Debug/net6.0/ref/Matrix.Core.dll

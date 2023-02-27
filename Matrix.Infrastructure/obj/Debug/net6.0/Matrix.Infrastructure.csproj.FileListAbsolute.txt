@@ -1,0 +1,14 @@
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/bin/Debug/net6.0/Matrix.Infrastructure.deps.json
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/bin/Debug/net6.0/Matrix.Infrastructure.runtimeconfig.json
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/bin/Debug/net6.0/Matrix.Infrastructure.dll
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/bin/Debug/net6.0/Matrix.Infrastructure.pdb
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.csproj.AssemblyReference.cache
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.AssemblyInfoInputs.cache
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.AssemblyInfo.cs
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.dll
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/refint/Matrix.Infrastructure.dll
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.pdb
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/Matrix.Infrastructure.genruntimeconfig.cache
+/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/obj/Debug/net6.0/ref/Matrix.Infrastructure.dll
