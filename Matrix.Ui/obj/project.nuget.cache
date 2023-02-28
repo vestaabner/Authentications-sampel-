@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "a1mgFRGPNuGaC7e4sYyxaJO1lvKSHv4Oz2Rzp/u1wixbLnCCxwKbUd+kTEVN3R6mJiJSgDeiWzwBENiZIhPakA==",
+  "dgSpecHash": "8lh+U2zuA+KOq/SvlPO4P0omZn7jq6OsTyBPgwh9PmsQT+JcbVJypXbgdb5hFeXiforhiSOFveNfpxZwOwVDUg==",
   "success": true,
   "projectFilePath": "/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Ui/Matrix.Ui.csproj",
   "expectedPackageFiles": [
     "/Users/ahmadhfr/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
-    "/Users/ahmadhfr/.nuget/packages/mediatr/12.0.1/mediatr.12.0.1.nupkg.sha512",
-    "/Users/ahmadhfr/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
+    "/Users/ahmadhfr/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
+    "/Users/ahmadhfr/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/10.0.1/mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.0/microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

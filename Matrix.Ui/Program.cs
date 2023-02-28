@@ -29,7 +29,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //builder.Services.AddMediatR(typeof(Program).Assembly);
 builder.Services.AddMediatR(typeof(LoginHandler).Assembly);
-
+//builder.Services.AddMediatR(cfg => cfg.registerSerivesfromAssembeli   );
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                .AddJwtBearer(option =>
