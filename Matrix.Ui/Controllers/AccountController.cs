@@ -1,4 +1,7 @@
 ﻿using System;
+using Matrix.Core.Commands;
+using Matrix.Core.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,7 +9,7 @@ namespace Matrix.Ui.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AccountController : BaseController
+    public class AccountController : ControllerBase
     {
         private readonly IConfiguration _configuration;
         private readonly IMediator _mediator;
@@ -17,18 +20,17 @@ namespace Matrix.Ui.Controllers
             _mediator = mediator;
         }
 
+
         [HttpPost("register")]
         [AllowAnonymous]
         public async Task<IActionResult> Register(RegisterInputVm model)
         {
-            var result = await _mediator.Send(new RegisterInputCommand
-            {
-                Email = model.Email,
-                Password = model.Password
-            });
-            return CustomOk(result);
+            var res = await _mediator.Send(new RegisterInputCommand(model.Email , model.Password));
+            return Ok(res);
 
         }
+
+
         [HttpPost("login")]
         [AllowAnonymous]
         public async Task<IActionResult> Login(LoginInputVm model)
@@ -39,10 +41,7 @@ namespace Matrix.Ui.Controllers
                 Email = model.Email,
                 Password = model.Password
             });
-            return CustomOk(result);
-
-
-
+            return Ok(result);
         }
 
         [HttpGet("test")]

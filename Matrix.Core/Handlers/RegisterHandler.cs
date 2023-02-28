@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Matrix.Core.Handlers
 {
-    public class RegisterHandler : IRequestHandler<RegisterInputCommand, Unit>
+    public  class RegisterHandler : IRequestHandler<RegisterInputCommand, string>
     {
         private readonly IUserRepository _userRepository;
 
@@ -14,7 +14,7 @@ namespace Matrix.Core.Handlers
             _userRepository = userRepository;
         }
 
-        public async Task<Unit> Handle(RegisterInputCommand request, CancellationToken cancellationToken)
+        public async Task<string> Handle(RegisterInputCommand request, CancellationToken cancellationToken)
         {
             byte[] passwordHash, passwordSalt;
             CreatePasswordHash(request.Password, out passwordHash, out passwordSalt);
@@ -27,7 +27,12 @@ namespace Matrix.Core.Handlers
             }
             await _userRepository.Add(request.Email, passwordHash, passwordSalt);
 
-            return Unit.Value;
+            return "";
+        }
+
+        public override string? ToString()
+        {
+            return base.ToString();
         }
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)

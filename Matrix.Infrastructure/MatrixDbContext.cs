@@ -11,8 +11,8 @@ namespace Matrix.Infrastructur
     {
         //public DbSet<Category> Categories { get; set; }
         //public DbSet<Feature> Features { get; set; }
-        public DbSet<Post> Products { get; set; }
-        public DbSet<User> Users { get; set; }
+       /// public DbSet<Post> Products { get; set; }
+        public DbSet<UserEntity> Users { get; set; }
 
 
         public MatrixDbContext(DbContextOptions<MatrixDbContext> options) : base(options)

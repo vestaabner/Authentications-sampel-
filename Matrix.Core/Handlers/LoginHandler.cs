@@ -3,7 +3,12 @@ using Matrix.Core.Interfaces;
 using MediatR;
 using System.Security.Claims;
 using System.Text;
-
+using Matrix.Core.Queries;
+using Microsoft.Extensions.Configuration;
+using System.IdentityModel.Tokens.Jwt;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
 namespace Matrix.Core.Handlers
 {
     public class LoginHandler : IRequestHandler<LoginInputQuery, LoginResponse>

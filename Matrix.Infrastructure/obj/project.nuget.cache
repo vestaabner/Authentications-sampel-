@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+pDPrQwhrh2iVMQ2IVIHymqSbJSqShnPy4v16TGVPf7mc+6R2pWpRfziQl0hJGPyN1AfaB0VVslYYpwMUQ8X1w==",
+  "dgSpecHash": "RxmXoj0YZiDD4tckgCKVu87eJerOowER9/29yzwKzvNU6jXlVjrakvFnH0vM3kUZWzTEQZD+usqFimJgduojwQ==",
   "success": true,
   "projectFilePath": "/Users/ahmadhfr/Documents/work/project/matrix/Matrix.Infrastructure/Matrix.Infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/ahmadhfr/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/mediatr/12.0.1/mediatr.12.0.1.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
-    "/Users/ahmadhfr/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.data.sqlclient/2.1.4/microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.data.sqlclient.sni.runtime/2.1.1/microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -22,13 +21,13 @@
     "/Users/ahmadhfr/.nuget/packages/microsoft.entityframeworkcore.tools/6.0.0/microsoft.entityframeworkcore.tools.6.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.caching.abstractions/6.0.0/microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.caching.memory/6.0.0/microsoft.extensions.caching.memory.6.0.0.nupkg.sha512",
-    "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.configuration/5.0.0/microsoft.extensions.configuration.5.0.0.nupkg.sha512",
+    "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.configuration/6.0.1/microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.configuration.abstractions/6.0.0/microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.configuration.fileextensions/5.0.0/microsoft.extensions.configuration.fileextensions.5.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.configuration.json/5.0.0/microsoft.extensions.configuration.json.5.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.configuration.usersecrets/5.0.0/microsoft.extensions.configuration.usersecrets.5.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.dependencyinjection/6.0.0/microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
-    "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.fileproviders.abstractions/5.0.0/microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.fileproviders.physical/5.0.0/microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.filesystemglobbing/5.0.0/microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
@@ -37,11 +36,12 @@
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.identity.client/4.21.1/microsoft.identity.client.4.21.1.nupkg.sha512",
+    "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.abstractions/6.26.1/microsoft.identitymodel.abstractions.6.26.1.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.jsonwebtokens/6.8.0/microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
-    "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.logging/6.8.0/microsoft.identitymodel.logging.6.8.0.nupkg.sha512",
+    "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.logging/6.26.1/microsoft.identitymodel.logging.6.26.1.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.protocols/6.8.0/microsoft.identitymodel.protocols.6.8.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/6.8.0/microsoft.identitymodel.protocols.openidconnect.6.8.0.nupkg.sha512",
-    "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.tokens/6.8.0/microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "/Users/ahmadhfr/.nuget/packages/microsoft.identitymodel.tokens/6.26.1/microsoft.identitymodel.tokens.6.26.1.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.netcore.platforms/3.1.0/microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.win32.primitives/4.3.0/microsoft.win32.primitives.4.3.0.nupkg.sha512",
@@ -132,16 +132,5 @@
     "/Users/ahmadhfr/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.11/microsoft.aspnetcore.app.ref.6.0.11.nupkg.sha512",
     "/Users/ahmadhfr/.nuget/packages/microsoft.netcore.app.ref/6.0.11/microsoft.netcore.app.ref.6.0.11.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 12.0.1 was resolved.",
-      "libraryId": "MediatR",
-      "targetGraphs": [
-        "net6.0"
-      ]
-    }
-  ]
+  "logs": []
 }

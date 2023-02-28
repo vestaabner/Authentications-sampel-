@@ -18,7 +18,7 @@ namespace Matrix.Infrastructure.Repositories
 
         public async Task Add(string requestEmail, byte[] passwordHash, byte[] passwordSalt)
         {
-            var item = new User
+            var item = new UserEntity
             {
                 Email = requestEmail,
                 PasswordHash = passwordHash,

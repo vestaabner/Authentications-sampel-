@@ -8,53 +8,126 @@
     ".NETCoreApp,Version=v6.0": {
       "Matrix.Core/1.0.0": {
         "dependencies": {
-          "MediatR": "12.0.1",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0"
+          "MediatR": "10.0.1",
+          "Microsoft.Extensions.Configuration": "6.0.1",
+          "Microsoft.IdentityModel.Tokens": "6.26.1",
+          "System.IdentityModel.Tokens.Jwt": "6.5.0"
         },
         "runtime": {
           "Matrix.Core.dll": {}
         }
       },
-      "MediatR/12.0.1": {
+      "MediatR/10.0.1": {
         "dependencies": {
-          "MediatR.Contracts": "2.0.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+          "MediatR.Contracts": "1.0.1"
         },
         "runtime": {
-          "lib/net6.0/MediatR.dll": {
-            "assemblyVersion": "12.0.0.0",
-            "fileVersion": "12.0.1.0"
+          "lib/netstandard2.1/MediatR.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.1.0"
           }
         }
       },
-      "MediatR.Contracts/2.0.1": {
+      "MediatR.Contracts/1.0.1": {
         "runtime": {
           "lib/netstandard2.0/MediatR.Contracts.dll": {
-            "assemblyVersion": "2.0.1.0",
-            "fileVersion": "2.0.1.0"
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         }
       },
-      "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.Extensions.Configuration/6.0.1": {
         "dependencies": {
-          "MediatR": "12.0.1",
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+          "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Primitives": "6.0.0"
         },
         "runtime": {
-          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.1.0.0"
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.322.12309"
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+      "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0"
+        },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         }
-      }
+      },
+      "Microsoft.Extensions.Primitives/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Abstractions/6.26.1": {
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
+            "assemblyVersion": "6.26.1.0",
+            "fileVersion": "6.26.1.40207"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/6.5.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "6.26.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
+            "assemblyVersion": "6.5.0.0",
+            "fileVersion": "6.5.0.10323"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/6.26.1": {
+        "dependencies": {
+          "Microsoft.IdentityModel.Abstractions": "6.26.1"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
+            "assemblyVersion": "6.26.1.0",
+            "fileVersion": "6.26.1.40207"
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/6.26.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Microsoft.IdentityModel.Logging": "6.26.1",
+          "System.Security.Cryptography.Cng": "4.5.0"
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
+            "assemblyVersion": "6.26.1.0",
+            "fileVersion": "6.26.1.40207"
+          }
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt/6.5.0": {
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "6.5.0",
+          "Microsoft.IdentityModel.Tokens": "6.26.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {
+            "assemblyVersion": "6.5.0.0",
+            "fileVersion": "6.5.0.10323"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Security.Cryptography.Cng/4.5.0": {}
     }
   },
   "libraries": {
@@ -63,33 +136,96 @@
       "serviceable": false,
       "sha512": ""
     },
-    "MediatR/12.0.1": {
+    "MediatR/10.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vfxplMielft+g5jxGO31xjjQpI6yqe4r2YGt0Q8x23phwbpJNmUQGY+cCNNFMKKViXRM67ajUlAiwirMeuJWTQ==",
-      "path": "mediatr/12.0.1",
-      "hashPath": "mediatr.12.0.1.nupkg.sha512"
+      "sha512": "sha512-vnjbk4giDJzJelh34Ygt0eorApCKrRFB7j0pauFPY1oxfO3cEZ7FugBrIOjCM76SDGTOmPFfbfmVnz1t3iFrGA==",
+      "path": "mediatr/10.0.1",
+      "hashPath": "mediatr.10.0.1.nupkg.sha512"
     },
-    "MediatR.Contracts/2.0.1": {
+    "MediatR.Contracts/1.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
-      "path": "mediatr.contracts/2.0.1",
-      "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
+      "sha512": "sha512-NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "path": "mediatr.contracts/1.0.1",
+      "hashPath": "mediatr.contracts.1.0.1.nupkg.sha512"
     },
-    "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+    "Microsoft.CSharp/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RW3etRuy6Xp63cgqfC0r/ITOtUT0f9ymJl1+1XZdzsYUsfv7WBPC2kXGOP8IYpY/6c4Q6805vbIW/88DopUs3w==",
-      "path": "mediatr.extensions.microsoft.dependencyinjection/11.1.0",
-      "hashPath": "mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512"
+      "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "path": "microsoft.csharp/4.5.0",
+      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/7.0.0": {
+    "Microsoft.Extensions.Configuration/6.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-h3j/QfmFN4S0w4C2A6X7arXij/M/OVw3uQHSOFxnND4DyAzO1F9eMX7Eti7lU/OkSthEE0WzRsfT/Dmx86jzCw==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/7.0.0",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+      "sha512": "sha512-BUyFU9t+HzlSE7ri4B+AQN2BgTgHv/uM82s5ZkgU1BApyzWzIl48nDsG5wR1t0pniNuuyTBzG3qCW8152/NtSw==",
+      "path": "microsoft.extensions.configuration/6.0.1",
+      "hashPath": "microsoft.extensions.configuration.6.0.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qWzV9o+ZRWq+pGm+1dF+R7qTgTYoXvbyowRoBxQJGfqTpqDun2eteerjRQhq5PQ/14S+lqto3Ft4gYaRyl4rdQ==",
+      "path": "microsoft.extensions.configuration.abstractions/6.0.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9+PnzmQFfEFNR9J2aDTfJGGupShHjOuGw4VUv+JB044biSHrnmCIMD+mJHmb2H7YryrfBEXDurxQ47gJZdCKNQ==",
+      "path": "microsoft.extensions.primitives/6.0.0",
+      "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Abstractions/6.26.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YE6pc6/TG1axQU5U1zGmgpcV4vKhEl4t0MTjqxdnnrorrozeBPkTECyZk9djysKTLfd8moBe7VHVpuf+jvmlkA==",
+      "path": "microsoft.identitymodel.abstractions/6.26.1",
+      "hashPath": "microsoft.identitymodel.abstractions.6.26.1.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/6.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9h0AqqcKck8pjrX1KCfm3pLrsH/nWa6Lt5G7kCee9bfbmMa6cxHOlLtgp9sp+hXuiHsjMv4YtpPCFEoFNsHwyA==",
+      "path": "microsoft.identitymodel.jsonwebtokens/6.5.0",
+      "hashPath": "microsoft.identitymodel.jsonwebtokens.6.5.0.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Logging/6.26.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ujS5+a2L3uquqeWa3i9uNjXAfEFuDzIfKlDqZ09aKTR2M6eLqQcc0BBhh0FtJkTmsfa8GJjKDEYVcbgVzNARfQ==",
+      "path": "microsoft.identitymodel.logging/6.26.1",
+      "hashPath": "microsoft.identitymodel.logging.6.26.1.nupkg.sha512"
+    },
+    "Microsoft.IdentityModel.Tokens/6.26.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dhUE+4uhO/JhGYYRWZynO42tZ5H2p2GeVFjCwa7gLzCWBeKowO2OEtFHG3Mq/DhBR+mp6+LzUdRkKR2kI3I+TQ==",
+      "path": "microsoft.identitymodel.tokens/6.26.1",
+      "hashPath": "microsoft.identitymodel.tokens.6.26.1.nupkg.sha512"
+    },
+    "System.IdentityModel.Tokens.Jwt/6.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-x1I1BcZrgF8CPWuR8pu6ip9wiQVSULozPSJLyAwMPt6f9bW8/u43OGxiaqLHnA0ybHrpOz3Misiu/D97gsYb+A==",
+      "path": "system.identitymodel.tokens.jwt/6.5.0",
+      "hashPath": "system.identitymodel.tokens.jwt.6.5.0.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.Cng/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
+      "path": "system.security.cryptography.cng/4.5.0",
+      "hashPath": "system.security.cryptography.cng.4.5.0.nupkg.sha512"
     }
   }
 }
