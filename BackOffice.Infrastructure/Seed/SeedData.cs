@@ -27,9 +27,7 @@ namespace BackOffice.Infrastructure.Seed
 
             if (!roleManager.Roles.Any())
             {
-
                 roleManager.CreateAsync(new Roles { Name = "Admin", NormalizedName = "ADMIN" });
-
             }
         }
 

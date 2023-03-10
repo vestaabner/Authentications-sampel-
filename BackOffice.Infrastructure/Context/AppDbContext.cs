@@ -13,7 +13,7 @@ namespace BackOffice.Infrastructure.Context
         public DbSet<Product>? Products { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ggg.Db;Uid=sa;Pwd=yourStrong(!)Password");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ffff.Db;User Id=sa;Password=yourStrong(!)Password; TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -27,7 +27,7 @@ namespace BackOffice.Infrastructure.Context
         AppDbContext IDesignTimeDbContextFactory<AppDbContext>.CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ggg.Db;Uid=sa;Pwd=yourStrong(!)Password");
+            optionsBuilder.UseSqlServer("Server=localhost,1433;Database=ffff.Db;User Id=sa;Password=yourStrong(!)Password; TrustServerCertificate=True");
             return new AppDbContext(optionsBuilder.Options);
         }
     }

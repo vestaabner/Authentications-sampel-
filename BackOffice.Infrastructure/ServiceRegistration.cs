@@ -49,11 +49,10 @@ namespace BackOffice.Infrastructure
                 opt.TokenValidationParameters = new()
                 {
                     ValidateIssuer = true,
-                    ValidAudience = configuration["JWT:ValidAudience"],
+                    ValidAudience = configuration["JWT:ValidAudience"] is null ? "http://localhost:4200" : configuration["JWT:ValidAudience"],
                     ValidateAudience = true,
-                    ValidIssuer = configuration["JWT:ValidIssuer"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"])),
-
+                    ValidIssuer = configuration["JWT:ValidIssuer"] is null ? "http://localhost:4200" : configuration["JWT:ValidAudience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"] is null ? "vijaySecretKey@345" : configuration["JWT:ValidAudience"])),
                 };
             });
         }
