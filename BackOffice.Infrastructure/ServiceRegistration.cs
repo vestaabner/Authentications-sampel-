@@ -4,59 +4,101 @@ using BackOffice.Application.Abstraction;
 using BackOffice.Domain.Entities;
 using BackOffice.Infrastructure.Context;
 using BackOffice.Infrastructure.Repositories;
-using BackOffice.Infrastructure.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 
 namespace BackOffice.Infrastructure
 {
     public static class ServiceRegistration
     {
-
-        public static void AddInfrastructureService(this IServiceCollection service, IConfiguration configuration)
+        public static void AddInfrastructureService(this IServiceCollection services, IConfiguration Configuration)
         {
-            service.AddDbContext<AppDbContext>(opt =>
+            services.AddDbContext<IdentityDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
 
-            opt.UseSqlServer(configuration["ConnectionString"])
-
-            );
-
-            service.AddTransient<IUserRepository , UserRepository>();
-            service.AddTransient<UserManager<User>>();
-            service.AddTransient<RoleManager<Roles>>();
-            service.AddTransient<IProductRepository, ProductRepository>();
-            service.AddTransient<IUnitOfWork, UnitOfWork.UnitOfWork>();
-            service.AddTransient<AppDbContext>();
-            service.AddIdentity<User, Roles>(opt =>
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
             {
-                opt.User.RequireUniqueEmail = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireDigit = true;
+                options.SignIn.RequireConfirmedEmail = true;
+            }).AddEntityFrameworkStores<IdentityDbContext>().AddDefaultTokenProviders();
 
-            }).AddEntityFrameworkStores<AppDbContext>();
-
-            service.AddAuthentication(opt =>
+            services.AddAuthentication(x =>
             {
-                opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                opt.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-                opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(opt =>
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(o =>
             {
-                opt.SaveToken = true;
-                opt.RequireHttpsMetadata = false;
-                opt.TokenValidationParameters = new()
+                var Key = Encoding.UTF8.GetBytes(Configuration["JWT:Key"]);
+                o.SaveToken = true;
+                o.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidateIssuer = true,
-                    ValidAudience = configuration["JWT:ValidAudience"] is null ? "http://localhost:4200" : configuration["JWT:ValidAudience"],
-                    ValidateAudience = true,
-                    ValidIssuer = configuration["JWT:ValidIssuer"] is null ? "http://localhost:4200" : configuration["JWT:ValidAudience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"] is null ? "vijaySecretKey@345" : configuration["JWT:ValidAudience"])),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = Configuration["JWT:Issuer"],
+                    ValidAudience = Configuration["JWT:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Key),
+                    ClockSkew = TimeSpan.Zero,
+                };
+
+                o.Events = new JwtBearerEvents
+                {
+                    OnAuthenticationFailed = context =>
+                    {
+                        if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                        {
+                            context.Response.Headers.Add("IS-TOKEN-EXPIRED", "true");
+                            context.Response.StatusCode = 401;
+                            context.Response.ContentType = "application/json";
+                            return context.Response.WriteAsync(JsonConvert.SerializeObject(context.Exception.Message));
+                        }
+                        return Task.CompletedTask;
+                    }
                 };
             });
-        }
 
+            services.AddSingleton<IJWTManagerRepository, JWTManagerRepository>();
+            services.AddScoped<IUserServiceRepository, UserServiceRepository>();
+
+
+
+            services
+                .AddSwaggerGen(c =>
+                {
+                    var securityScheme = new OpenApiSecurityScheme
+                    {
+                        Description = "Bearer {token}",
+                        Name = "Authorization",
+                        In = ParameterLocation.Header,
+                        Type = SecuritySchemeType.Http,
+                        Scheme = "bearer",
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                    };
+                    c.SwaggerDoc("v1", new OpenApiInfo
+                    {
+                        Title = "Hooshmand.BackOffice.Api",
+                        Version = "v1"
+                    });
+                    c.AddSecurityDefinition("Bearer", securityScheme);
+                    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {securityScheme, new [] {"Bearer"} }
+                });
+                });
+        }
     }
 }
 

@@ -8,10 +8,10 @@ namespace BackOffice.Application.Mapping
     public class GeneralMapping : Profile
     {
 
-        public GeneralMapping()
-        {
-            CreateMap<ProductDto, Product>().ReverseMap();
-        }
+        //public GeneralMapping()
+        //{
+        //    CreateMap<ProductDto, Product>().ReverseMap();
+        //}
 
     }
 }

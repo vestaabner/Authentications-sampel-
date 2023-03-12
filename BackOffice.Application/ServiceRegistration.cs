@@ -11,9 +11,9 @@ public static class Application
     public static void AddApplicationServices(this IServiceCollection services)
     {
 
-        services.AddValidatorsFromAssemblyContaining<UserValidator>();
-        services.AddValidatorsFromAssemblyContaining<ProductValidator>();
-        services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        //services.AddValidatorsFromAssemblyContaining<UserValidator>();
+        //services.AddValidatorsFromAssemblyContaining<ProductValidator>();
+        //services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
         
 

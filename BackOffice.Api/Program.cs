@@ -1,5 +1,4 @@
 ﻿using BackOffice.Application;
-using BackOffice.Application.CQRS.Queries;
 using BackOffice.Application.Dtos;
 using BackOffice.Infrastructure;
 using MediatR;
@@ -15,8 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructureService(builder.Configuration);
 builder.Services.AddApplicationServices();
 
-builder.Services.AddMediatR(typeof(Program).Assembly);
-builder.Services.AddTransient<IRequestHandler<GetProductsQuery, GetProductsQueryResponseDto>, GetProductsQueryHandler>();
+//builder.Services.AddMediatR(typeof(Program).Assembly);
 
 var app = builder.Build();
 
@@ -27,9 +25,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseSwagger();
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
+
 
 app.MapControllers();
 

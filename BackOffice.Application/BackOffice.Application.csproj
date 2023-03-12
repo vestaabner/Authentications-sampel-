@@ -7,6 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CQRS\Command\**" />
+    <EmbeddedResource Remove="CQRS\Command\**" />
+    <None Remove="CQRS\Command\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\BackOffice.Domain\BackOffice.Domain.csproj" />
   </ItemGroup>
   <ItemGroup>
@@ -16,7 +22,6 @@
     <None Remove="Validator\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CQRS\Command\" />
     <Folder Include="Mapping\" />
     <Folder Include="Validator\" />
   </ItemGroup>
